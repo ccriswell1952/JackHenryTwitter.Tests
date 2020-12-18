@@ -1,5 +1,17 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿// ***********************************************************************
+// Assembly         : JackHenryTwitter.Tests
+// Author           : Chuck
+// Created          : 12-15-2020
+//
+// Last Modified By : Chuck
+// Last Modified On : 12-15-2020
+// ***********************************************************************
+// <copyright file="AssemblyInfo.cs" company="">
+//     Copyright ©  2020
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following

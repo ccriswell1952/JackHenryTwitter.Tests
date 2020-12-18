@@ -4,7 +4,7 @@
 // Created          : 12-05-2020
 //
 // Last Modified By : Chuck
-// Last Modified On : 12-08-2020
+// Last Modified On : 12-15-2020
 // ***********************************************************************
 // <copyright file="MethodUnitTests.cs" company="">
 //     Copyright ©  2020
@@ -23,7 +23,17 @@ namespace JackHenryTwitter.Tests.UnitTests
     [TestClass]
     public class MethodUnitTests
     {
-        GetTwitterDataFromJsonFile getData = new GetTwitterDataFromJsonFile();
+        #region Private Fields
+
+        /// <summary>
+        /// The get data
+        /// </summary>
+        private GetTwitterDataFromJsonFile getData = new GetTwitterDataFromJsonFile();
+
+        #endregion Private Fields
+
+        #region Public Methods
+
         /// <summary>
         /// Defines the test method TestCheckForEmoji.
         /// </summary>
@@ -38,6 +48,9 @@ namespace JackHenryTwitter.Tests.UnitTests
             Assert.IsTrue(emojiList.Count > 0);
         }
 
+        /// <summary>
+        /// Defines the test method TestCheckForUrls.
+        /// </summary>
         [TestMethod]
         public void TestCheckForUrls()
         {
@@ -47,7 +60,7 @@ namespace JackHenryTwitter.Tests.UnitTests
             urlString.Add(@"you https://fun.tv are http://verrygood.org here 🤡💔");
             //List<EmojiBase> emojiList = JackHenryTwitter.Utilities.LineStatParsers.GetUrlCount(urlString);
             int count = Utilities.LineStatParsers.GetTotalUrlCount(urlString);
-            List<string> urlList = Utilities.LineStatParsers.GetUrlList(urlString); 
+            List<string> urlList = Utilities.LineStatParsers.GetUrlList(urlString);
             Assert.IsTrue(count > 0);
         }
 
@@ -111,5 +124,7 @@ namespace JackHenryTwitter.Tests.UnitTests
             stats.SetAverageTimes();
             Assert.IsTrue(stats.AverageTweetsReceivedPerSecond > 0);
         }
+
+        #endregion Public Methods
     }
 }
