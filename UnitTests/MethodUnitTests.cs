@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter.Tests
-// Author           : Chuck
-// Created          : 12-05-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter.Tests Author : Chuck Created : 12-05-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-15-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-15-2020 ***********************************************************************
 // <copyright file="MethodUnitTests.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using JackHenryTwitter.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -44,7 +41,7 @@ namespace JackHenryTwitter.Tests.UnitTests
             emojiString.Add(@"mas tu é hetero 😔🤡💔");
             emojiString.Add(@"you are here 😔💔");
             emojiString.Add(@"you are here 🤡💔");
-            List<EmojiBase> emojiList = JackHenryTwitter.Utilities.LineStatParsers.GetEmojiList(emojiString);
+            List<Emoji> emojiList = JackHenryTwitter.Utilities.LineStatParsers.GetEmojiList(emojiString);
             Assert.IsTrue(emojiList.Count > 0);
         }
 
@@ -71,7 +68,7 @@ namespace JackHenryTwitter.Tests.UnitTests
         public void TestSetPctTweetsWithPhoto()
         {
             Root root = getData.GetTweeterRootData();
-            TweetStats stats = new TweetStats(root, new List<EmojiBase>(), new RunningTotals());
+            TweetStats stats = new TweetStats(root, new List<Emoji>(), new RunningTotals());
             stats.SetPctTweetsWithPhoto();
             Assert.IsTrue(stats.PctTweetsWithPhoto > 0);
         }
@@ -83,7 +80,7 @@ namespace JackHenryTwitter.Tests.UnitTests
         public void TestSetPctTweetsWithUrl()
         {
             Root root = getData.GetTweeterRootData();
-            TweetStats stats = new TweetStats(root, new List<EmojiBase>(), new RunningTotals());
+            TweetStats stats = new TweetStats(root, new List<Emoji>(), new RunningTotals());
             stats.SetPctTweetsWithUrl();
             Assert.IsTrue(stats.PctTweetsWithUrl > 0);
         }
@@ -95,7 +92,7 @@ namespace JackHenryTwitter.Tests.UnitTests
         public void TestSetTopHashtags()
         {
             Root root = getData.GetTweeterRootData();
-            TweetStats stats = new TweetStats(root, new List<EmojiBase>(), new RunningTotals());
+            TweetStats stats = new TweetStats(root, new List<Emoji>(), new RunningTotals());
             stats.SetTopHashtags();
             Assert.IsTrue(stats.TopHashtagList.Count > 0);
         }
@@ -107,7 +104,7 @@ namespace JackHenryTwitter.Tests.UnitTests
         public void TestSetTopUrlDomains()
         {
             Root root = getData.GetTweeterRootData();
-            TweetStats stats = new TweetStats(root, new List<EmojiBase>(), new RunningTotals());
+            TweetStats stats = new TweetStats(root, new List<Emoji>(), new RunningTotals());
             stats.SetTopUrlDomains();
             Assert.IsTrue(stats.TopUrlDomainList.Count > 0);
         }

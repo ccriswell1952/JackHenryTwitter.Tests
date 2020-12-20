@@ -1,15 +1,12 @@
-﻿// ***********************************************************************
-// Assembly         : JackHenryTwitter.Tests
-// Author           : Chuck
-// Created          : 12-15-2020
+﻿// *********************************************************************** Assembly :
+// JackHenryTwitter.Tests Author : Chuck Created : 12-15-2020
 //
-// Last Modified By : Chuck
-// Last Modified On : 12-15-2020
-// ***********************************************************************
+// Last Modified By : Chuck Last Modified On : 12-15-2020 ***********************************************************************
 // <copyright file="HomeControllerTest.cs" company="">
-//     Copyright ©  2020
+//     Copyright © 2020
 // </copyright>
-// <summary></summary>
+// <summary>
+// </summary>
 // ***********************************************************************
 using JackHenryTwitter.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
